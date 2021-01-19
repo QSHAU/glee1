@@ -122,7 +122,8 @@
         margin-bottom: 20px;
         color: $default;
         font-size: 14px;
-
+        line-height: 20px;
+        @extend %rubik-400;
     }
 
     &__item__contact {
@@ -131,8 +132,8 @@
     }
 
     &__item__services {
-        width: 125px;
-        margin-right: 176px;
+        width: 130px;
+        margin-right: 160px;
     }
 
     &__item__account {
@@ -199,7 +200,7 @@
     border-top: 1px solid #dae4e9;
 
     &__copy {
-        @extend %dmsans-400;
+        @extend %rubik-400;
     }
 
     &__nav {
@@ -208,9 +209,10 @@
 
     &__nav-link {
         color: $default;
+        font-size: 14px;
         margin-right: 15px;
         padding-left: 15px;
-        @extend %dmsans-400;
+        @extend %rubik-400;
     }
 
     &__nav-link:first-child {
