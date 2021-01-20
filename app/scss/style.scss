@@ -1,6 +1,7 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
 
 .header {
@@ -41,6 +42,7 @@
         border-radius: 50%;
         display: flex;
         justify-content: center;
+        align-items: center;
     }
     
     &__wrapper {
@@ -79,7 +81,7 @@
         right: 21px;
         font-size: 10px;
         color: $accent;
-        @extend %rubik-400;
+        @extend %dmsans-400;
         text-align: center;
         line-height: 15px;
     }
@@ -95,6 +97,213 @@
         background-color: #a3bbc8;
         display: flex;
         justify-content: center;
+        align-items: center;
+    }
+
+    &__link-img-search {
+        width: 15px;
+        height: 15px;
+    }
+
+    &__link-img-icon {
+        width: 22px;
+        height: 22px;
+    }
+
+}
+
+.top-slider {
+    padding-top: 65px;
+
+    &__inner {
+        background-color: #fcd7b6;
+        z-index: 0;
+    }
+
+    &__item {
+        display: flex !important;
+        padding: 220px 115px 205px 0;
+        position: relative;
+    }
+
+    &__content {
+        padding-left: 295px;
+        padding-right: 50px;
+    }
+
+    &__title {
+        margin-bottom: 20px;
+        font-size: 65px;
+        line-height: 68px;
+        color: $accent;
+        max-width: 411px;
+        @extend %rubik-500;
+    }
+
+    &__text {
+        margin-bottom: 40px;
+        max-width: 315px;
+        font-size: 15px;
+        line-height: 25px;
+        color: #436372;
+        @extend %rubik-400;
+    }
+
+    &__link {
+        display: block;
+        background-color: #a3bbc8;
+        font-size: 15px;
+        padding-left: 19px;
+        padding-top: 20px;
+        color: #fff;
+        width: 200px;
+        height: 60px;
+        @extend %rubik-500;
+        position: relative;
+    }
+
+    &__img {
+        z-index: 2;
+        height: 100%;
+        align-self: flex-end;
+    }
+
+    // &__item::after {
+    //     content: "";
+    //     background-image: url(/images/slider/photo-bg.png);
+    //     width: 610px;
+    //     height: 635px;
+    //     position: absolute;
+    //     top: 70px;
+    //     left: 900px;
+    // }
+
+     &__link::after {
+         content: "";
+         position: absolute;
+         background-image: url(/images/slider/arrow.png);
+         width: 22px;
+         height: 9px;
+         margin-top: 5px;
+         margin-left: 70px;
+     }
+}
+
+.slick-dots {
+    display: flex;
+    justify-content: center;
+
+    li {
+        margin-right: 12px;
+    }
+
+    li:last-child {
+        margin-right: 0;
+    }
+
+    button {
+        @extend %rubik-500;
+        border: none;
+        border-radius: 50%;
+        margin-bottom: 45px;
+        font-size: 10px;
+        color: $accent;
+        width: 30px;
+        height: 30px;
+        background-color: #fff;
+        opacity: .5;
+        transition: opacity .3s;
+        cursor: pointer;
+    }
+
+    & .slick-active button {
+        opacity: 1;
+    }
+}
+
+.info {
+    display: flex;
+    background-color: #fef7f0;
+
+    &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 590px;
+        padding-top: 45px;
+        padding-bottom: 35px;
+    }
+
+    &__item:first-child {
+        border-right: 1px solid #e8e4df;
+    }
+
+    &__item:last-child {
+        border-left: 1px solid #e8e4df;
+    }
+
+    &__item-del {
+        align-self: flex-start;
+    }
+
+    &__item-wrapper {
+        padding: 0 80px;
+    }
+
+    &__item-wrapper-sup {
+         position: relative;
+    }
+
+    &__item-wrapper-sup::before {
+        content: "";
+        position: absolute;
+        width: 54px;
+        height: 54px;
+        background-image: url(/images/icons/sup.png);
+        background-repeat: no-repeat;
+        left: 5px;
+    }
+
+    &__item-wrapper-del {
+        position: relative;
+    }
+
+    &__item-wrapper-del::before {
+        content: "";
+        position: absolute;
+        background-image: url(/images/icons/del.png);
+        width: 55px;
+        height: 37px;
+        left: 5px;
+    }
+
+    &__item-wrapper-card {
+        position: relative;
+    }
+
+    &__item-wrapper-card::before {
+        content: "";
+        position: absolute;
+        width: 54px;
+        height: 53px;
+        background-image: url(/images/icons/card.png);
+        left: 5px;
+        top: 5px;
+    }
+
+    &__item-title {
+        @extend %dmsans-700;
+        font-size: 16px;
+        margin-bottom: 5px;
+        color: #414141;
+    }
+
+    &__item-text {
+        @extend %dmsans-500;
+        font-size: 14px;
+        line-height: 30px;
+        color: #585858;
+        max-width: 185px;
     }
 }
 
