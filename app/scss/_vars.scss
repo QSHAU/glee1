@@ -1,5 +1,6 @@
 $accent: #243f4d;
 $default: #7b7b7b;
+$title: #191919;
 
 
 %dmsans-400 {
@@ -30,4 +31,11 @@ $default: #7b7b7b;
 %poppins-700 {
     font-family: 'Poppins-Bold', sans-serif;
     font-weight: 700;
+}
+
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
 }
