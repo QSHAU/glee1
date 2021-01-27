@@ -24,6 +24,13 @@ $(function () {
         autoplaySpeed: 3000
     });
 
+    $(".star-rate").rateYo({
+      starWidth: "17px",
+      normalFill: "#ccccce",
+      ratedFill: "#ffc35b",
+      readOnly: true,
+    });
+
 
 });
 
