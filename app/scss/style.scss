@@ -435,6 +435,11 @@
     }
 }
 
+.star-rate {
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
 .lighting {
     margin-bottom: 100px;
 }
@@ -700,9 +705,15 @@
         transition: color .3s;
         margin-bottom: 15px;
         min-height: 65px;
+        
         &:hover {
             color: #2626269e;
         }
+    }
+
+    &-img {
+        height: 250px;
+        object-fit: cover;
     }
 
     &__wrapper {
