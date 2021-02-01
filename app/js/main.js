@@ -1,14 +1,5 @@
 $(function(){
 
-  
-
-  $('.star-rate').rateYo({
-    starWidth: "17px",
-    normalFill: "#ccccce",
-    ratedFill: "#ffc35b",
-    readOnly: true,
-  });
-
   $(".filter-price__input").ionRangeSlider({
     type: "double",
     prefix: "$",
@@ -32,14 +23,30 @@ $(function(){
         autoplaySpeed: 3000
     });
 
+    $('.star-rate').rateYo({
+      starWidth: "17px",
+      normalFill: "#ccccce",
+      ratedFill: "#ffc35b",
+      readOnly: true,
+    });
+
     $('.filter-products__star-rate').rateYo({
       starWidth: "11px",
       normalFill: "#d6d6d6",
       ratedFill: "#ffcc00",
+      spacing: "5px",
       readOnly: true,
     });
 
-    if($('.filter-1')){
+    $('.shop__product__star-rate').rateYo({
+      starWidth: "17px",
+      normalFill: "#ccccce",
+      ratedFill: "#ffc35b",
+      spacing: "7px",
+      readOnly: true,
+    });
+
+    if(document.querySelector('[data-ref="mix1"]')){
       var containerEl1 = document.querySelector('[data-ref="mix1"]');
   
       var mixer1 = mixitup(containerEl1, {
@@ -49,7 +56,7 @@ $(function(){
       });
     }
   
-    if($('.filter-2')) {
+    if(document.querySelector('[data-ref="mix2"]')) {
       var containerEl2 = document.querySelector('[data-ref="mix2"]');
   
       var mixer2 = mixitup(containerEl2, {
