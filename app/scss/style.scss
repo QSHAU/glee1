@@ -232,6 +232,230 @@
     }
 }
 
+.shop {
+    margin: 115px 0 120px;
+
+    &__inner {
+        display: flex;
+    }
+
+    &__filters {
+        margin-right: 30px;
+    }
+
+    &__content {
+        display: grid;
+        grid-column-gap: 30px;
+        grid-row-gap: 40px;
+        grid-template-columns: repeat(3 , 270px);
+        grid-template-rows: repeat(4, 380px);
+    }
+}
+
+.filter__item {
+    width: 270px;
+
+    
+}
+
+.filter-category {
+    margin-bottom: 55px;
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__label, .filter-brand__label{
+        margin-bottom: 2px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__input, .filter-brand__input {
+        @extend %checkbox-hidden;
+        &:checked + .filter-category__checkbox{
+            background-color: #edf1f4;
+        }
+    }
+    &__checkbox, .filter-brand__checkbox {
+        @extend %rubik-400;
+        color: $accent;
+        font-size: 16px;
+        width: 270px;
+        border-radius: 5px;
+        padding: 13px 15px;
+        cursor: pointer;
+        transition: all .3s;
+        position: relative;
+
+        &:hover {
+        background-color: #edf1f4;
+        }
+
+        &::after {
+            content: "";
+            background-image: url(../images/icons/arrow-shop.svg);
+            width: 5px;
+            height: 10px;
+            position: absolute;
+            top: 18px;
+            right: 20px;
+        }
+    }
+}
+
+.filter-title {
+    display: inline-block;
+    @extend %dmsans-700;
+    color: $accent;
+    font-size: 18px;
+    margin-bottom: 30px;
+    position: relative;
+    text-transform: uppercase;
+
+    &::after {
+        content: "";
+        background-color: #a3bbc8;
+        width: 38px;
+        height: 2px;
+        position: absolute;
+        top: 11px;
+        right: -55px;
+    }
+}
+
+.filter-price {
+    margin-bottom: 85px;
+
+    &__label {
+        display: flex;
+        justify-content: space-between;
+
+         span {
+            @extend %rubik-400;
+            color: $accent;
+            font-size: 14px;
+            margin-top: 20px;
+
+        }
+    }
+
+    &__wrapper {
+        @extend %rubik-400;
+            color: $accent;
+            font-size: 14px;
+    }
+
+}
+
+.filter-brand {
+    margin-bottom: 65px;
+
+    &__label {
+        display: block;
+        margin-bottom: 2px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__input {
+        @extend %checkbox-hidden;
+        &:checked + .filter-brand__checkbox{
+            background-color: #edf1f4;
+        }
+    }
+
+    &__checkbox {
+        display: flex;
+        justify-content: space-between;
+        @extend %rubik-400;
+        color: $accent;
+        font-size: 16px;
+        width: 270px;
+        border-radius: 5px;
+        padding: 13px 15px;
+        cursor: pointer;
+        transition: all .3s;
+        position: relative;
+
+        &:hover {
+        background-color: #edf1f4;
+        }
+    }
+}
+
+.filter-products {
+
+    &__link {
+        display: flex;
+        margin-bottom: 23px;
+    }
+
+    &__wrapper-img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 70px;
+        height: 70px;
+        border: 2px solid #f2f2f2;
+        margin-right: 20px;
+    }
+
+    &__wrapper-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; 
+    }
+
+    &__text__title {
+        @extend %rubik-400;
+        color: #333333;
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    &__price {
+        @extend %rubik-400;
+        color: #333333;
+        font-size: 15px;
+
+    }
+}
+
+.irs--flat .irs-line {
+    top: 6px;
+    height: 3px;
+    background-color: #c2d2db;
+    border-radius: 0;
+}
+
+.irs--flat .irs-handle {
+    top: 0px;
+    width: 15px;
+    height: 15px;
+    background-color: #c2d2db;
+}
+
+.irs--flat .irs-bar {
+    top: 6px;
+    height: 4px;
+    background-color: #a3bbc8;
+}
+
+.irs--flat .irs-handle>i:first-child {
+    display: none;
+}
+
+.irs-from, .irs-to, .irs-single {
+    display: none;
+}
+
+.irs--flat .irs-min, .irs--flat .irs-max {
+    display: none;
+}
 
 
 .top-slider {
@@ -615,23 +839,29 @@
         height: 60px;
         border-radius: 5px;
         position: relative;
+        transition: all .3s;
+
+        &:hover {
+            background-color: #a3bbc8;
+            color: #fff;
+            path {
+                fill: #fff;
+            }
+        }
     }
 
-    &__link::after {
-        content: "";
+    &__svg {
         position: absolute;
-        background-image: url(/images/icons/arrow.svg);
-        width: 22px;
-        height: 9px;
-        margin-top: 5px;
-        margin-left: 50px;
-    }  
+        top: 25px;
+        right: 10px;
+    }
 
     &__img {
         margin-top: -190px;
     }
       
 }
+
 
 .lighting__item:last-child {
     margin-right: 0;
