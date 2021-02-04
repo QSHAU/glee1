@@ -1,5 +1,22 @@
 $(function(){
 
+  $('.porduct-item__num').styler();
+
+  $('.product-slide__thumb').slick({
+    asNavFor: '.product-slide__big',
+    focusOnSelect: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    vertical: true,
+    draggable: false
+  });
+  $('.product-slide__big').slick({
+    asNavFor: '.product-slide__thumb',
+    draggable: false,
+    arrows: false,
+    fade: true
+  });
+
   $(".filter-price__input").ionRangeSlider({
     type: "double",
     prefix: "$",
@@ -39,6 +56,14 @@ $(function(){
     });
 
     $('.shop__product__star-rate').rateYo({
+      starWidth: "17px",
+      normalFill: "#ccccce",
+      ratedFill: "#ffc35b",
+      spacing: "7px",
+      readOnly: true,
+    });
+
+    $('.product-item__star').rateYo({
       starWidth: "17px",
       normalFill: "#ccccce",
       ratedFill: "#ffc35b",
