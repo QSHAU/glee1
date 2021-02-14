@@ -1,0 +1,74 @@
+.filter__item {
+    width: 270px;
+  }
+  
+  .filter-category {
+    margin-bottom: 55px;
+  
+    &__form {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    &__label,
+    .filter-brand__label {
+      margin-bottom: 2px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  
+    &__input,
+    .filter-brand__input {
+      @extend %checkbox-hidden;
+      &:checked + .filter-category__checkbox {
+        background-color: #edf1f4;
+      }
+    }
+    &__checkbox,
+    .filter-brand__checkbox {
+      @extend %rubik-400;
+      color: $accent;
+      font-size: 16px;
+      width: 270px;
+      border-radius: 5px;
+      padding: 13px 15px;
+      cursor: pointer;
+      transition: all 0.3s;
+      position: relative;
+  
+      &:hover {
+        background-color: #edf1f4;
+      }
+  
+      &::after {
+        content: "";
+        background-image: url(../images/icons/arrow-shop.svg);
+        width: 5px;
+        height: 10px;
+        position: absolute;
+        top: 18px;
+        right: 20px;
+      }
+    }
+  }
+  
+  .filter-title {
+    display: inline-block;
+    @extend %dmsans-700;
+    color: $accent;
+    font-size: 18px;
+    margin-bottom: 30px;
+    position: relative;
+    text-transform: uppercase;
+  
+    &::after {
+      content: "";
+      background-color: #a3bbc8;
+      width: 38px;
+      height: 2px;
+      position: absolute;
+      top: 11px;
+      right: -55px;
+    }
+  }

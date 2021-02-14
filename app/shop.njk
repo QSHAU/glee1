@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glee</title>
+    <link rel="stylesheet" href="css/shop.min.css">
+</head>
+<body>
+    
+    {% include 'module/_header/_header.html' %}
+
+    <main class="main">
+
+            <section class="top">
+                <h2 class="top__title">
+                    Product list 1
+                </h2>
+                <div class="breadcrumbs">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="#">
+                                Home
+                            </a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="#">
+                                Product list 1
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            {% include 'module/_shop/_shop.html' %}
+
+        {% include 'module/_client/_client.html' %}
+    </main>
+
+    {% include 'module/_footer/_footer.html' %}
+
+    <script src="js/main.min.js"></script>
+</body>
+</html>

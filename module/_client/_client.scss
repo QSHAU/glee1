@@ -1,0 +1,11 @@
+.client {
+    background-color: #fef7f0;
+    padding-top: 270px;
+    padding-bottom: 90px;
+
+    &__logo {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+}

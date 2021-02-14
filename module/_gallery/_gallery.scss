@@ -1,0 +1,130 @@
+.gallery {
+    margin-bottom: 185px;
+  }
+  
+  .gallery__top {
+    text-align: center;
+  
+    &-title {
+      @extend %dmsans-700;
+      font-size: 36px;
+      color: $title;
+      margin-bottom: 35px;
+    }
+  
+    &__btn {
+      @extend %dmsans-700;
+      font-size: 16px;
+      line-height: 1;
+      color: #8b8b8b;
+      border: none;
+      background-color: transparent;
+      padding: 0;
+      margin-right: 25px;
+      cursor: pointer;
+      transition: color 0.3s;
+      margin-bottom: 80px;
+    }
+  
+    &__btn:last-child {
+      margin-right: 0;
+    }
+  
+    &__btn:hover {
+      color: $title;
+    }
+  }
+  
+  .gallery__content {
+    display: grid;
+    grid-template-columns: repeat(4, 270px);
+    grid-template-rows: 380px 380px;
+    grid-row-gap: 40px;
+    grid-column-gap: 30px;
+  
+    &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      padding-bottom: 155px;
+      position: relative;
+      box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+  
+    &__item:hover {
+      .gallery__content__icon {
+        transform: translateY(0);
+      }
+    }
+  
+    &__icon {
+      display: flex;
+      position: absolute;
+      transform: translateY(500%);
+      transition: transform 0.3s;
+    }
+  
+    &__icon path {
+      fill: #a3bac7;
+    }
+  
+    &__link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #fff;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      margin-right: 15px;
+      transition: all 0.3s;
+      border: none;
+      cursor: pointer;
+  
+      &:hover {
+        background-color: #a3bac7;
+        path {
+          fill: #fff;
+        }
+      }
+    }
+  
+    &__link:last-child {
+      margin-right: 0;
+    }
+  }
+  
+  .gallery__item {
+    &-img {
+      padding-top: 10px;
+    }
+  
+    &-wrapper {
+      position: absolute;
+      padding-bottom: 35px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  
+    &-img-desc {
+      @extend %dmsans-500;
+      color: $accent;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+  
+    &-img-price {
+      @extend %dmsans-700;
+      color: #a3bbc8;
+      text-align: center;
+    }
+  }
+  
+  .star-rate {
+    margin: 0 auto;
+    padding-top: 10px;
+  }

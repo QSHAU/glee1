@@ -1,0 +1,38 @@
+.statistic {
+    height: 320px;
+    background-color: #fcd7b6;
+    margin-bottom: 120px;
+  
+    &__items {
+      width: 100%;
+      height: 320px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      text-align: center;
+    }
+  
+    &__item {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      height: 150px;
+  
+      &-img {
+        height: 62px;
+      }
+  
+      &-num {
+        @extend %dmsans-700;
+        color: $accent;
+        font-size: 36px;
+      }
+  
+      &-desc {
+        @extend %dmsans-700;
+        color: $accent;
+        font-size: 18px;
+      }
+    }
+  }

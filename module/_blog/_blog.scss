@@ -1,0 +1,109 @@
+.blog__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 55px;
+  
+    &__title {
+      @extend %dmsans-700;
+      color: $title;
+      font-size: 36px;
+    }
+  
+    &__link {
+      @extend %dmsans-700;
+      color: #262626;
+      font-size: 16px;
+      padding-right: 20px;
+      position: relative;
+    }
+  
+    &__link::after {
+      content: "";
+      background-image: url(../images/icons/arrow-insights.svg);
+      width: 6px;
+      height: 11px;
+      position: absolute;
+      top: 5px;
+      right: 0;
+    }
+  }
+  
+  .blog__items {
+    display: flex;
+    margin-bottom: -200px;
+  }
+  
+  .blog__item {
+    max-width: 370px;
+    margin-right: 30px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+  
+    &:last-child {
+      margin-right: 0;
+    }
+  
+    &__theme {
+      @extend %poppins-700;
+      display: block;
+      color: #fff;
+      font-size: 14px;
+      line-height: 20px;
+      background-color: #a3bbc8;
+      border-radius: 25px;
+      padding: 7px 30px;
+      transform: translateY(-18px);
+      width: 103px;
+    }
+  
+    &__link {
+      display: block;
+      @extend %dmsans-500;
+      color: #262626;
+      font-size: 18px;
+      line-height: 22px;
+      width: 295px;
+      transition: color 0.3s;
+      margin-bottom: 15px;
+      min-height: 65px;
+  
+      &:hover {
+        color: #2626269e;
+      }
+    }
+  
+    &-img {
+      height: 250px;
+      object-fit: cover;
+    }
+  
+    &__wrapper {
+      padding: 0 25px 25px 25px;
+    }
+  
+    &__bottom {
+      display: flex;
+      padding-top: 20px;
+      padding-bottom: 25px;
+      border-top: 1px solid #e0e0e0;
+    }
+  
+    &__bottom-number {
+      @extend %rubik-400;
+      font-size: 12px;
+      color: #222933;
+      margin-right: 40px;
+    }
+  
+    &__bottom-contact {
+      @extend %rubik-400;
+      font-size: 12px;
+      color: #222933;
+      transition: color 0.3s;
+      &:hover {
+        color: #767f7f;
+      }
+    }
+  }
