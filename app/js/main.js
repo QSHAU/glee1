@@ -1,5 +1,9 @@
 $(function(){
 
+  $('.menu-btn').on('click', function (){
+    $('.menu__list').toggleClass('menu__list--active');
+  });
+
   $('.product-tab__box-item').on('click', function(e){
     e.preventDefault();
     $('.product-tab__box-item').removeClass('product-tab__box-item--active');

@@ -130,3 +130,74 @@
       margin: 0;
     }
   }
+
+  @media (max-width: 1100px) {
+    .footer-top {
+      flex-wrap: wrap;
+
+      &__item__newsletter {
+        // margin-top: 20px;
+        margin-right: auto;
+        max-width: 100%;
+      }
+    }
+  }
+
+  @media (max-width: 915px) {
+    .footer-top {
+
+      &__item__newsletter {
+        margin-top: 20px;
+        margin-right: 0;
+      }
+
+      &__item__account {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  @media (max-width: 650px) {
+    .footer-top {
+
+      &__item__contact,
+      &__item__newsletter {
+        width: 100%;
+      }
+
+      &__item__contact,
+      &__item__services,
+      &__item__account,
+      &__item__newsletter {
+        // width: 100%;
+        margin-right: 0;
+        // align-items: center;
+      }
+
+      &__item__services {
+        margin-top: 20px;
+        margin-right: 40px;
+      }
+    }
+
+    .footer-bottom {
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 0;
+
+      &__nav {
+        order: -1;
+      }
+      
+      &__nav-link {
+        margin-right: 10px;
+        padding-left: 10px;
+    }
+
+      &__copy {
+        margin-top: 20px;
+        font-size: 10px;
+        order: 1;
+      }
+  }
+  }
