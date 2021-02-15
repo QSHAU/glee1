@@ -1,0 +1,77 @@
+.lighting {
+    margin-bottom: 100px;
+  }
+  
+  .lighting__items {
+    display: flex;
+  }
+  
+  .lighting__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #feefe2;
+    margin-right: 30px;
+    padding: 100px 0;
+    height: 390px;
+    width: 870px;
+  
+    &__wrapper {
+      margin-left: 45px;
+      padding-right: 20px;
+    }
+  
+    &__title {
+      @extend %dmsans-700;
+      color: $accent;
+      font-size: 26px;
+      line-height: 36px;
+      margin-bottom: 15px;
+      max-width: 270px;
+    }
+  
+    &__desc {
+      @extend %rubik-400;
+      color: $accent;
+      font-size: 16px;
+      line-height: 25px;
+      max-width: 340px;
+      margin-bottom: 25px;
+    }
+  
+    &__link {
+      display: block;
+      @extend %rubik-500;
+      color: #436372;
+      font-size: 15px;
+      padding: 20px 15px;
+      border: 1px solid #b3b7b5;
+      width: 180px;
+      height: 60px;
+      border-radius: 5px;
+      position: relative;
+      transition: all 0.3s;
+  
+      &:hover {
+        background-color: #a3bbc8;
+        color: #fff;
+        path {
+          fill: #fff;
+        }
+      }
+    }
+  
+    &__svg {
+      position: absolute;
+      top: 25px;
+      right: 10px;
+    }
+  
+    &__img {
+      margin-top: -190px;
+    }
+  }
+  
+  .lighting__item:last-child {
+    margin-right: 0;
+  }

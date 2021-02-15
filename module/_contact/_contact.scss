@@ -1,0 +1,204 @@
+.contact {
+    margin: 115px 0 130px;
+  
+    &__overtitle {
+      @extend %poppins-700;
+      color: #a3bbc8;
+      font-size: 16px;
+      text-align: center;
+    }
+  
+    &__title {
+      @extend %dmsans-700;
+      font-size: 35px;
+      color: #436372;
+      margin-bottom: 70px;
+      text-align: center;
+    }
+  
+    &__items {
+      display: grid;
+      grid-template-columns: repeat(3 , 370px);
+      grid-template-rows: 380px;
+      grid-column-gap: 30px;
+    }
+  
+    &__item {
+      border: 2px solid #fbfbfb;
+      transition: all .3s;
+      &:hover {
+        border: 2px solid #a3bbc8;
+  
+        .contact__item-icon {
+          background-color: #a3bbc8;
+          path {
+            transition: all .3s;
+            fill: #fff;
+          }
+        }
+      }
+      
+      
+      &-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #fbfbfb;
+      height: 100%;
+      }
+  
+      &-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80px;
+        height: 80px;
+        background-color: #fff;
+        border-radius: 20px;
+        box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);
+        margin-bottom: 60px;
+        transition: all .3s;
+      }
+  
+      &-address {
+        @extend %dmsans-700;
+        font-size: 20px;
+        color: #222;
+        margin-bottom: 20px;
+      }
+  
+      &-info {
+        @extend %rubik-400;
+        color: #565872;
+        margin-bottom: 10px;
+  
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  
+    &__map {
+      display: flex;
+      padding-top: 120px;
+  
+      &-item {
+        margin-right: 50px;
+      }
+  
+      &-form {
+        width: 620px;
+      }
+  
+      &-name {
+        width: 300px;
+        height: 50px;
+        border: none;
+        background-color: #fafafa;
+        padding: 18px 45px 20px 20px;
+        margin-bottom: 25px;
+        margin-right: 16px;
+  
+        &::placeholder {
+          @extend %rubik-400;
+          color: #565872;
+          font-size: 16px;
+          text-transform: uppercase;
+        }
+  
+        &__wrapper {
+          display: inline-block;
+          position: relative;
+  
+          &::after {
+            content: "";
+            width: 14px;
+            height: 13px;
+            background-image: url(../images/icons/user-map.svg);
+            position: absolute;
+            right: 35px;
+            top: 17px;
+          }
+        }
+      }
+  
+      &-email {
+        width: 300px;
+        height: 50px;
+        border: none;
+        background-color: #fafafa;
+        padding: 18px 45px 20px 20px;
+  
+        &::placeholder {
+          @extend %rubik-400;
+          color: #565872;
+          font-size: 16px;
+          text-transform: uppercase;
+        }
+  
+        &__wrapper {
+          display: inline-block;
+          position: relative;
+  
+          &::after {
+            content: "";
+            width: 18px;
+            height: 12px;
+            background-image: url(../images/icons/email-map.svg);
+            position: absolute;
+            right: 20px;
+            top: 18px;
+          }
+        }
+      }
+  
+      &-text {
+        width: 620px;
+        height: 175px;
+        border: none;
+        background-color: #fafafa;
+        resize: none;
+        padding: 18px 50px 20px 20px;
+        margin-bottom: 30px;
+  
+        &::placeholder {
+          @extend %rubik-400;
+          color: #565872;
+          font-size: 16px;
+          text-transform: uppercase;
+        }
+  
+        &__wrapper {
+          position: relative;
+  
+          &::after {
+            content: "";
+            width: 18px;
+            height: 15px;
+            background-image: url(../images/icons/message-map.svg);
+            position: absolute;
+            right: 22px;
+            top: 19px;
+          }
+        }
+      }
+  
+      &-btn {
+        @extend %poppins-600;
+        color: #fff; 
+        font-size: 15px;
+        width: 200px;
+        height: 50px;
+        border: none;
+        border-radius: 5px;
+        background-color: #a3bbc8;
+        cursor: pointer;
+      }
+    }
+  }
+  
+  #map {
+    width: 500px;
+    height: 335px;
+  }

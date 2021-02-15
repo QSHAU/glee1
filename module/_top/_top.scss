@@ -1,0 +1,12 @@
+.top {
+    background-color: #edf1f4;
+    padding: 35px 0;
+    text-align: center;
+  
+    &__title {
+      @extend %rubik-300;
+      color: #222933;
+      font-size: 36px;
+      margin-bottom: 5px;
+    }
+  }

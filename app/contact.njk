@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glee</title>
+    <link rel="stylesheet" href="css/contact.min.css">
+</head>
+<body>
+    
+    {% include 'module/_header/_header.njk' %}
+
+    <main class="main">
+
+            <section class="top">
+                <h2 class="top__title">
+                    Contact
+                </h2>
+                <div class="breadcrumbs">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="#">
+                                Home
+                            </a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="#">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            {% include 'module/_contact/_contact.html' %}
+        
+            {% include 'module/_blog/_blog.html' %}
+
+            {% include 'module/_clients/_clients.html' %}
+    </main>
+
+    {% include 'module/_footer/_footer.njk' %}
+
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&libraries=&v=weekly"
+      async
+    ></script>
+    <script>
+    let map;
+
+        function initMap() {
+          map = new google.maps.Map(document.getElementById("map"), {
+            center: { lat: 29.75738854145352, lng: -95.28221411200973 },
+            zoom: 9,
+          });
+        }
+        </script>
+    <script src="js/main.min.js"></script>
+</body>
+</html>

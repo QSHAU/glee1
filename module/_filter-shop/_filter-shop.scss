@@ -1,0 +1,94 @@
+.filter-price {
+    margin-bottom: 85px;
+  
+    &__label {
+      display: flex;
+      justify-content: space-between;
+  
+      span {
+        @extend %rubik-400;
+        color: $accent;
+        font-size: 14px;
+        margin-top: 20px;
+      }
+    }
+  
+    &__wrapper {
+      @extend %rubik-400;
+      color: $accent;
+      font-size: 14px;
+    }
+  }
+  
+  .filter-brand {
+    margin-bottom: 65px;
+  
+    &__label {
+      display: block;
+      margin-bottom: 2px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  
+    &__input {
+      @extend %checkbox-hidden;
+      &:checked + .filter-brand__checkbox {
+        background-color: #edf1f4;
+      }
+    }
+  
+    &__checkbox {
+      display: flex;
+      justify-content: space-between;
+      @extend %rubik-400;
+      color: $accent;
+      font-size: 16px;
+      width: 270px;
+      border-radius: 5px;
+      padding: 13px 15px;
+      cursor: pointer;
+      transition: all 0.3s;
+      position: relative;
+  
+      &:hover {
+        background-color: #edf1f4;
+      }
+    }
+  }
+  
+  .filter-products {
+    &__link {
+      display: flex;
+      margin-bottom: 23px;
+    }
+  
+    &__wrapper-img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 70px;
+      height: 70px;
+      border: 2px solid #f2f2f2;
+      margin-right: 20px;
+    }
+  
+    &__wrapper-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  
+    &__text__title {
+      @extend %rubik-400;
+      color: #333333;
+      font-size: 14px;
+      line-height: 16px;
+    }
+  
+    &__price {
+      @extend %rubik-400;
+      color: #333333;
+      font-size: 15px;
+    }
+  }

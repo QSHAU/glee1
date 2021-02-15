@@ -1,0 +1,29 @@
+.terms {
+    padding-top: 120px;
+  
+    &__item {
+      margin-bottom: 70px;
+    }
+  
+    &__title {
+      @extend %rubik-500;
+      color: $accent;
+      font-size: 24px;
+      margin-bottom: 25px;
+    }
+  
+    &__list__item {
+      @extend %rubik-400;
+      color: $accent;
+      line-height: 30px;
+      margin-bottom: 20px;
+      list-style: decimal-leading-zero;
+      margin-left: 28px;
+    }
+  
+    &__text {
+      @extend %rubik-400;
+      color: $accent;
+      line-height: 30px;
+    }
+  }

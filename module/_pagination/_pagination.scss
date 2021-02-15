@@ -1,0 +1,31 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+  
+    &__items {
+      display: flex;
+    }
+  
+    &__link {
+      @extend %rubik-400;
+      color: $accent;
+      height: 50px;
+      border: 1px solid #a3bbc8;
+      margin-right: 15px;
+      text-align: center;
+      line-height: 50px;
+      transition: all 0.2s;
+      padding: 0 20px;
+      &:last-child {
+        margin-right: 0;
+      }
+      &:hover {
+        background-color: #a3bbc8;
+        color: #fff;
+      }
+      &--active {
+        background-color: #a3bbc8;
+        color: #fff;
+      }
+    }
+  }
