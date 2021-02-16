@@ -26,7 +26,7 @@
   
     &__content {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3, 370px);
       grid-template-rows: repeat(2, 245px);
       grid-column-gap: 30px;
       grid-row-gap: 35px;
@@ -100,3 +100,62 @@
   .mixitup-control-active {
     color: $title;
   }
+
+  @media (max-width: 1200px) {
+    .design {
+
+  &__content {
+      grid-template-columns: repeat(2, 370px);
+      grid-template-rows: repeat(3, 245px);
+      grid-column-gap: 20px;
+      grid-row-gap: 20px;
+      justify-content: center;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .design {
+
+    &__top{
+
+    &__button {
+      margin-bottom: 30px;
+    }
+
+    &-btn {
+      margin-right: 10px;
+      margin-bottom: 15px;
+    }
+  }
+
+    &__title {
+      font-size: 25px;
+    }
+
+    &__content {
+        grid-template-columns: repeat(1, 290px);
+        grid-template-rows: repeat(6, 200px);
+        grid-column-gap: 0;
+        justify-content: center;
+
+        &__item {
+          padding-left: 20px;
+        }
+
+        &__item-img {
+          width: 100px;
+          height: 104px;
+          object-fit: contain;
+          left: 175px;
+        }
+      }
+    }
+
+    .sofa {
+      margin-bottom: 40px;
+      width: 175px;
+      left: 215px;
+      height: auto;
+    }
+}
