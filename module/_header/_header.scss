@@ -208,5 +208,11 @@
       &__wrapper {
         margin: 0 5px;
       }
+
+      &__link-cart,
+      &__link-like {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
     }
   }

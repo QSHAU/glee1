@@ -11,3 +11,9 @@
       height: 500px;
     }
   }
+
+  @media (max-width: 800px) {
+    .video__popup {
+      height: 400px;
+    }
+  }
