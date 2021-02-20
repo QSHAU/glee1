@@ -1,7 +1,10 @@
 <section class="shop">
     <div class="container-sm">
         <div class="shop__inner">
-            {% include 'module/_filter-shop/_filter-shop.html' %}
+            <button class="shop__filter-btn">
+                <img src="images/icons/filter-btn.svg" alt="filter button">
+            </button>
+            {% include 'module/_filter-shop/_filter-shop.njk' %}
             <div class="shop__wrapper">
                 <div class="shop__content"> 
                     {% include 'module/_gallery-shop/_gallery-shop.html' %}

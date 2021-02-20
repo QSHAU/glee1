@@ -202,3 +202,76 @@
     width: 500px;
     height: 335px;
   }
+
+  @media (max-width: 1200px) {
+    .contact {
+
+      &__items {
+        grid-template-columns: 370px;
+        grid-template-rows: repeat(3, 380px);
+        grid-column-gap: 0px;
+        grid-row-gap: 30px;
+        justify-content: center;
+      }
+
+      &__map {
+        flex-direction: column;
+
+        &-item {
+          margin-right: 0;
+          margin-top: 20px;
+          order: 1;
+          width: 100%;
+        }
+
+        &-form {
+          width: 100%;
+        }
+
+        &-name {
+          width: 100%;
+          margin-right: 0;
+
+          &__wrapper {
+            width: 100%;
+          }
+        }
+        
+        &-email {
+          width: 100%;
+          margin-bottom: 25px;
+
+          &__wrapper {
+            width: 100%;
+          }
+        }
+
+        &-text {
+          width: 100%;
+
+          &__wrapper {
+            width: 100%;
+          }
+        }
+      }
+    }
+    #map {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .contact{
+      margin: 30px 0 50px;
+
+      &__items {
+        grid-template-columns: 270px;
+        grid-template-rows: repeat(3, 330px)
+      }
+      
+      &__map {
+        padding-top: 40px;
+      }
+    }
+
+  }
