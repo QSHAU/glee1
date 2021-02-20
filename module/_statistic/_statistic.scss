@@ -36,3 +36,26 @@
       }
     }
   }
+
+  @media (max-width: 800px) {
+    .statistic {
+      height: auto;
+      margin-bottom: 50px;
+      
+
+      &__items {
+        flex-wrap: wrap;
+        min-height: 320px;
+        height: 100%;
+        padding: 85px 0;
+      }
+
+      &__item {
+        margin-top: 15px ;
+      }
+      
+      &__item + .statistic__item {
+        margin-left: 10px;
+      }
+    }
+  }

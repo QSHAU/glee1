@@ -29,6 +29,7 @@ body {
 .breadcrumbs {
     display: inline-flex;
     justify-content: center;
+    flex-wrap: wrap;
     &__list {
         display: flex;
     }
@@ -62,4 +63,5 @@ body {
         color: inherit;
     }
 }
+
   

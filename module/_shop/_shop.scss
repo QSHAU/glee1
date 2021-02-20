@@ -1,5 +1,9 @@
 .shop {
     margin: 115px 0 120px;
+
+    &__filter-btn {
+      display: none;
+    }
   
     &__inner {
       display: flex;
@@ -62,7 +66,7 @@
       color: $accent;
       margin-bottom: 35px;
       margin-top: 40px;
-      width: 415px;
+      max-width: 415px;
     }
   
     &-wrapper__btn {
@@ -135,4 +139,110 @@
   .irs--flat .irs-min,
   .irs--flat .irs-max {
     display: none;
+  }
+  
+  @media (max-width: 1200px) {
+    .shop {
+
+      &__filters {
+        display: none;
+        margin-right: 0;
+        position: absolute;
+        right: 0px;
+        left: 0;
+        top: 20px;
+        background: #fff;
+        z-index: 100;
+        padding: 40px 15px;
+      }
+
+      &__filter-btn {
+        display: block;
+        border: none;
+        background-color: #a3bbc8;
+        border-radius: 5px;
+        width: 40px;
+        height: 40px;
+        position: fixed;
+        bottom: 40px;
+        right: 10px;
+        z-index: 101;
+      }
+
+      &__content {
+        justify-content: center;
+      }
+
+      &__inner {
+        display: block;
+      }
+    }
+    
+  }
+
+  @media (max-width: 900px) {
+    .shop {
+      margin: 45px 0 50px;
+
+      &__wrapper {
+        margin: 0 auto;
+      }
+
+     &__content {
+      grid-template-columns: repeat(2, 270px);
+      grid-template-rows: repeat(6, 380px);
+     }
+    }
+
+    .shop__product {
+      grid-template-rows: repeat(4, 345px);
+
+      &__wrapper-img {
+        width: 200px;
+        margin-right: 25px;
+      }
+
+      &__title {
+        font-size: 30px;
+        margin-bottom: 15px;
+      }
+
+      &__star-rate {
+        margin-bottom: 25px;
+      }
+
+      &__desc {
+        margin-top: 15px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    .shop {
+
+     &__content {
+      margin-bottom: 40px;
+      grid-template-columns: 270px;
+      grid-template-rows: repeat(12, 380px);
+     }
+    }
+
+    .shop__product {
+      display: block;
+
+      &-item {
+        flex-direction: column;
+      }
+
+      &__wrapper-img {
+        width: 280px;
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+
+      &__star-rate {
+        margin-bottom: 15px;
+      }
+    }
   }

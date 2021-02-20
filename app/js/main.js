@@ -1,5 +1,9 @@
 $(function(){
 
+  $('.shop__filter-btn').on('click', function (){
+    $('.shop__filters').slideToggle();
+  });
+
   $('.menu-btn').on('click', function (){
     $('.menu__list').toggleClass('menu__list--active');
   });
@@ -48,6 +52,29 @@ $(function(){
       slidesToShow: 4,
       slidesToScroll: 4,
       arrows: false,
+      responsive: [
+        {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3
+          }
+        },
+        {
+          breakpoint: 900,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
     });
 
     $('.next').on('click', function() {

@@ -12,19 +12,16 @@
         margin-right: 15px;
         margin-left: 15px;
         margin-bottom: 50px;
-        &:last-child {
-          margin-bottom: 0;
-        }
       }
     }
   }
 
   @media (max-width: 800px) {
     .client {
+      padding-bottom: 0;
 
       &__logo {
         flex-direction: column;
-        justify-content: space-around;
       }
     }
   }
